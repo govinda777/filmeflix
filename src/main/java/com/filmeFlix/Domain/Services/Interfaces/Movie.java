@@ -8,8 +8,8 @@ import java.util.List;
 public interface Movie {
 
     List<MovieInfo> findAll();
-    MovieInfo findAtLeastScore();
     boolean save(MovieInfo entity);
     boolean remove(String id);
+    boolean deleteLowScore();
     MovieInfo getLowScore();
 }

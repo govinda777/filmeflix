@@ -34,10 +34,17 @@ public class MovieController {
         return movie.save(entity);
     }
 
+    @DeleteMapping("/lowScore")
+    @PreAuthorize("hasRole('ADMIN')")
+    @ApiImplicitParam(name = "Authorization", value = "Access Token", required = true, paramType = "header", example = "Bearer access_token")
+    public boolean deleteLowScore() {
+        return movie.deleteLowScore();
+    }
+
     @GetMapping("/lowScore")
     @PreAuthorize("hasRole('ADMIN')")
     @ApiImplicitParam(name = "Authorization", value = "Access Token", required = true, paramType = "header", example = "Bearer access_token")
-    public MovieInfo lowScore() {
+    public MovieInfo getLowScore() {
         return movie.getLowScore();
     }
 }

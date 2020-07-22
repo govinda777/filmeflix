@@ -25,12 +25,8 @@ public class MovieService implements Movie {
     }
 
     @Override
-    public MovieInfo findAtLeastScore() {
-        return null;
-    }
-
-    @Override
     public boolean save(MovieInfo entity) {
+
         MovieInfo result = movieRepository.save(entity);
 
         return result != null;
@@ -38,11 +34,24 @@ public class MovieService implements Movie {
 
     @Override
     public boolean remove(String id) {
-        return false;
+
+        movieRepository.delete(id);
+
+        return true;
+    }
+
+    @Override
+    public boolean deleteLowScore() {
+
+        MovieInfo movideLowScore = getLowScore();
+        remove(movideLowScore.id);
+
+        return true;
     }
 
     @Override
     public MovieInfo getLowScore() {
+
         return movieRepository.findTopByOrderByScoreAsc();
     }
 }
