@@ -12,4 +12,6 @@ import java.util.List;
 public interface MovieRepository extends MongoRepository<MovieInfo, String> {
 
     MovieInfo findTopByOrderByScoreAsc();
+    List<MovieInfo> findByOrderByLaunchedDesc();
+
 }

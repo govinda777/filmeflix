@@ -21,7 +21,7 @@ public class MovieService implements Movie {
 
     @Override
     public List<MovieInfo> findAll() {
-        return movieRepository.findAll();
+        return movieRepository.findByOrderByLaunchedDesc();
     }
 
     @Override
