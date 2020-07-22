@@ -11,4 +11,5 @@ public interface Movie {
     MovieInfo findAtLeastScore();
     boolean save(MovieInfo entity);
     boolean remove(String id);
+    MovieInfo getLowScore();
 }

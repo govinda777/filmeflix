@@ -40,4 +40,9 @@ public class MovieService implements Movie {
     public boolean remove(String id) {
         return false;
     }
+
+    @Override
+    public MovieInfo getLowScore() {
+        return movieRepository.findTopByOrderByScoreAsc();
+    }
 }

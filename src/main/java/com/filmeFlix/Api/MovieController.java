@@ -6,6 +6,7 @@ import com.filmeFlix.Domain.Services.Interfaces.Customer;
 import com.filmeFlix.Domain.Services.Interfaces.Movie;
 import io.swagger.annotations.ApiImplicitParam;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,8 +28,16 @@ public class MovieController {
     }
 
     @PostMapping("/save")
+    @PreAuthorize("hasRole('ADMIN')")
     @ApiImplicitParam(name = "Authorization", value = "Access Token", required = true, paramType = "header", example = "Bearer access_token")
     public boolean save(@RequestBody MovieInfo entity) {
         return movie.save(entity);
+    }
+
+    @GetMapping("/lowScore")
+    @PreAuthorize("hasRole('ADMIN')")
+    @ApiImplicitParam(name = "Authorization", value = "Access Token", required = true, paramType = "header", example = "Bearer access_token")
+    public MovieInfo lowScore() {
+        return movie.getLowScore();
     }
 }
