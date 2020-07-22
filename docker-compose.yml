@@ -1,0 +1,22 @@
+version: '3'
+services:
+  api:
+    build: .
+    ports:
+      - "8088:8088"
+    networks:
+      - mongo-compose-network
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo_data:/data/db
+    networks:
+      - mongo-compose-network
+
+
+networks:
+  mongo-compose-network:
+    driver: bridge

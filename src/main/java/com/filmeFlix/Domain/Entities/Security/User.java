@@ -3,7 +3,6 @@ package com.filmeFlix.Domain.Entities.Security;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.validation.constraints.Size;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -14,13 +13,10 @@ public class User {
   @Id
   private String id;
 
-  @Size(max = 20)
   private String username;
 
-  @Size(max = 50)
   private String email;
 
-  @Size(max = 120)
   private String password;
 
   @DBRef

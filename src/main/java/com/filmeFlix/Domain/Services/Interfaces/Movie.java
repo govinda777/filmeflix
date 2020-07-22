@@ -9,7 +9,8 @@ public interface Movie {
 
     List<MovieInfo> findAll();
     boolean save(MovieInfo entity);
-    boolean remove(String id);
+    boolean remove(MovieInfo entity);
     boolean deleteLowScore();
     MovieInfo getLowScore();
+
 }

@@ -1,0 +1,1 @@
+mvnw package && docker build -t filmeflix . && docker run -p 8088:8088 filmeflix

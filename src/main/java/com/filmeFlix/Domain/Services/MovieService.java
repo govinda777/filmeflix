@@ -4,6 +4,7 @@ import com.filmeFlix.Domain.Entities.MovieInfo;
 import com.filmeFlix.Domain.Services.Interfaces.Movie;
 import com.filmeFlix.Infra.Data.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -33,9 +34,9 @@ public class MovieService implements Movie {
     }
 
     @Override
-    public boolean remove(String id) {
+    public boolean remove(MovieInfo entity) {
 
-        movieRepository.delete(id);
+        movieRepository.delete(entity);
 
         return true;
     }
@@ -44,7 +45,7 @@ public class MovieService implements Movie {
     public boolean deleteLowScore() {
 
         MovieInfo movideLowScore = getLowScore();
-        remove(movideLowScore.id);
+        remove(movideLowScore);
 
         return true;
     }
@@ -54,4 +55,6 @@ public class MovieService implements Movie {
 
         return movieRepository.findTopByOrderByScoreAsc();
     }
+
+
 }

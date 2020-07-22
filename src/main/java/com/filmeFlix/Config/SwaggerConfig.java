@@ -1,6 +1,7 @@
 package com.filmeFlix.Config;
 
-
+/*
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -14,9 +15,10 @@ import static springfox.documentation.builders.PathSelectors.regex;
 
 @EnableSwagger2
 @Configuration
+@EnableAutoConfiguration*/
 public class SwaggerConfig {
 
-
+/*
     @Bean
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -30,16 +32,16 @@ public class SwaggerConfig {
     private ApiInfo metaInfo() {
 
         ApiInfo apiInfo = new ApiInfo(
-                "Spring Boot Swagger Example API",
-                "Spring Boot Swagger Example API for Youtube",
+                "Filme Flix",
+                "",
                 "1.0",
                 "Terms of Service",
-                new Contact("TechPrimers", "https://www.youtube.com/TechPrimers",
-                        "techprimerschannel@gmail.com"),
+                new Contact("TechPrimers", "",
+                        "govinda777@gmail.com"),
                 "Apache License Version 2.0",
                 "https://www.apache.org/licesen.html"
         );
 
         return apiInfo;
-    }
+    }*/
 }

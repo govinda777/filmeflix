@@ -3,6 +3,7 @@ package com.filmeFlix.Config;
 
 import com.filmeFlix.Domain.Services.Security.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -25,6 +26,7 @@ import com.filmeFlix.Infra.Security.Jwt.AuthTokenFilter;
         // securedEnabled = true,
         // jsr250Enabled = true,
         prePostEnabled = true)
+@EnableAutoConfiguration
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private static final String[] AUTH_WHITELIST = {

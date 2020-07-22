@@ -1,20 +1,15 @@
 package com.filmeFlix.Api.Payloads.Requests;
 
 import java.util.Set;
-
-import javax.validation.constraints.*;
  
 public class SignupRequest {
 
-    @Size(min = 3, max = 20)
     private String username;
 
-    @Size(max = 50)
     private String email;
     
     private Set<String> roles;
 
-    @Size(min = 6, max = 40)
     private String password;
   
     public String getUsername() {
