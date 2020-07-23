@@ -1,5 +1,6 @@
 package com.filmeFlix.Api;
 
+import com.filmeFlix.Api.Payloads.Requests.MovieRequest;
 import com.filmeFlix.Domain.Entities.MovieInfo;
 import com.filmeFlix.Domain.Services.Interfaces.Movie;
 import io.swagger.annotations.ApiImplicitParam;
@@ -29,8 +30,15 @@ public class MovieController {
     @PostMapping("/save")
     @PreAuthorize("hasRole('ADMIN')")
     @ApiImplicitParam(name = "Authorization", value = "Access Token", required = true, paramType = "header", example = "Bearer access_token")
-    public boolean save(@RequestBody MovieInfo entity) {
-        return movie.save(entity);
+    public boolean save(@RequestBody MovieRequest movieRequest) {
+
+        MovieInfo movieInfo = new MovieInfo();
+
+        movieInfo.launched = movieRequest.launched;
+        movieInfo.name = movieRequest.name;
+        movieInfo.score = movieRequest.score;
+
+        return movie.save(movieInfo);
     }
 
     @DeleteMapping("/lowScore")
