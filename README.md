@@ -4,34 +4,34 @@ Projeto para avaliação do processo seletivo ELO. 
 
 ## Tecnologías utilizadas
 
-* Java
-* Spring
-* JWT
-* MongoDB
-* Swagger
-* Docker
-* Maven
+- Java
+- Spring
+- JWT
+- MongoDB
+- Swagger
+- Docker
+- Maven
 
 ## Pré requisitos
 
-* Docker
-* Maven
+- Docker
+- Maven
 
 ## Como executar
 
-- Passo 1 - execute o comando :
+- Passo 1 - execute o comando :
 
 ```cmd
 mvn clean install
 ```
 
-- Passo 2 - inicie a aplicação utilizando o docker-compose
+- Passo 2 - inicie a aplicação utilizando o docker-compose
 
 ```cmd
 docker-compose up
 ```
 
-- Passo 3 - Abra entre na aplicação
+- Passo 3 - Abra entre na aplicação
 
 #### Swagger
 
@@ -39,8 +39,8 @@ http://localhost:8088/swagger-ui.html
 
 ## Portas que a aplicação utiliza
 
-* 8088 - Api
-* 27017 - MongoDB
+- 8088 - Api
+- 27017 - MongoDB
 
 ## Como criar um usuário Admin
 
@@ -69,12 +69,12 @@ Rota POST /api/auth/signup
 
 ## Links de Referência utilizados para desenvolver esse projeto 
 
-* https://bezkoder.com/spring-boot-jwt-auth-mongodb/
-* https://docs.docker.com/compose/compose-file/
-* https://www.marcobehler.com/guides/mvn-clean-install-a-short-guide-to-maven
-* https://github.com/springfox/springfox/issues/3052
-* https://medium.com/@por.porkaew15/spring-boot-application-and-docker-with-intellij-ide-8d2a843c529e
-* https://github.com/spring-guides/gs-spring-boot-docker/tree/master/complete
+- https://bezkoder.com/spring-boot-jwt-auth-mongodb/
+- https://docs.docker.com/compose/compose-file/
+- https://www.marcobehler.com/guides/mvn-clean-install-a-short-guide-to-maven
+- https://github.com/springfox/springfox/issues/3052
+- https://medium.com/@por.porkaew15/spring-boot-application-and-docker-with-intellij-ide-8d2a843c529e
+- https://github.com/spring-guides/gs-spring-boot-docker/tree/master/complete
 
 ## O que poderia ter sido desenvolvido melhor 
 
