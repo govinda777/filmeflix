@@ -67,7 +67,7 @@ Rota POST /api/auth/signup
 }
 ```
 
-## Links de Referência utilizados para desenvolver esse projeto 
+## Links de Referência utilizados para desenvolver esse projeto 
 
 - https://bezkoder.com/spring-boot-jwt-auth-mongodb/
 - https://docs.docker.com/compose/compose-file/
