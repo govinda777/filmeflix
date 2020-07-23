@@ -1,6 +1,6 @@
 package com.filmeFlix.Config;
 
-/*
+
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,10 +15,10 @@ import static springfox.documentation.builders.PathSelectors.regex;
 
 @EnableSwagger2
 @Configuration
-@EnableAutoConfiguration*/
+@EnableAutoConfiguration
 public class SwaggerConfig {
 
-/*
+
     @Bean
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -43,5 +43,5 @@ public class SwaggerConfig {
         );
 
         return apiInfo;
-    }*/
+    }
 }

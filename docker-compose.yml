@@ -1,12 +1,5 @@
 version: '3'
 services:
-  api:
-    build: .
-    ports:
-      - "8088:8088"
-    networks:
-      - mongo-compose-network
-
   mongo:
     image: mongo
     ports:
@@ -15,7 +8,14 @@ services:
       - ./mongo_data:/data/db
     networks:
       - mongo-compose-network
-
+  api:
+    build: .
+    ports:
+      - "8088:8088"
+    depends_on:
+      - mongo
+    networks:
+      - mongo-compose-network
 
 networks:
   mongo-compose-network:
