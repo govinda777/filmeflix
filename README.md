@@ -1,8 +1,8 @@
-# Filme Flix
+# Filme Flix
 
 Projeto para avaliação do processo seletivo ELO. 
 
-## Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - Java
 - Spring
@@ -12,12 +12,12 @@ Projeto para avaliação do processo seletivo ELO. 
 - Docker
 - Maven
 
-## Pré requisitos
+## Pré requisitos
 
 - Docker
 - Maven
 
-## Como executar
+## Como executar
 
 - Passo 1 - execute o comando :
 
@@ -33,11 +33,11 @@ docker-compose up
 
 - Passo 3 - Abra entre na aplicação
 
-#### Swagger
+#### Swagger
 
 http://localhost:8088/swagger-ui.html
 
-## Portas que a aplicação utiliza
+## Portas que a aplicação utiliza
 
 - 8088 - Api
 - 27017 - MongoDB
@@ -76,7 +76,7 @@ Rota POST /api/auth/signup
 - https://medium.com/@por.porkaew15/spring-boot-application-and-docker-with-intellij-ide-8d2a843c529e
 - https://github.com/spring-guides/gs-spring-boot-docker/tree/master/complete
 
-## O que poderia ter sido desenvolvido melhor 
+## O que poderia ter sido desenvolvido melhor 
 
 - 1 - Poderia ter criado um micro serviço responsável apenas pela autenticação.
 - 2 - As informações de autenticação poderiam estar pelo menos em um banco de dados diferente
