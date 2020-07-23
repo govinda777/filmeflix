@@ -1,43 +1,88 @@
-# Filme Flix
+# Filme Flix
 
-Projeto para avaliação do processo seletivo ELO.
+Projeto para avaliação do processo seletivo ELO. 
 
-Projeto para avaliação do processo seletivo ELO. dsfbdfb dfbdf 
-## Tecnologias utilizadas
+## Tecnologías utilizadas
 
-* Java
-* Spring
-* JWT
-* MongoDB
-* Swagger
-* Docker
-* Maven
+* Java
+* Spring
+* JWT
+* MongoDB
+* Swagger
+* Docker
+* Maven
 
-## Pré requisitos
+## Pré requisitos
 
-* Docker
-* Maven
+* Docker
+* Maven
 
-## Como executar
+## Como executar
 
-- Passo 1 - execute o comando :
+- Passo 1 - execute o comando :
 
 ```cmd
 mvn clean install
 ```
 
-- Passo 2 - inicie a aplicação utilizando o docker-compose
+- Passo 2 - inicie a aplicação utilizando o docker-compose
 
 ```cmd
-docker-compose up
+docker-compose up
 ```
 
+- Passo 3 - Abra entre na aplicação
 
-# Spring Boot integration with Swagger 2 UI
+#### Swagger
 
-`http://localhost:8088/swagger-ui.html` - Shows the list of Endpoints in the current RESTful webservice.
+http://localhost:8088/swagger-ui.html
 
+## Portas que a aplicação utiliza
 
-https://bezkoder.com/spring-boot-jwt-auth-mongodb/
+* 8088 - Api
+* 27017 - MongoDB
 
-mvn clean install
+## Como criar um usuário Admin
+
+Rota POST /api/auth/signup
+
+```json
+{
+  "email": "{qualquer e-mail}",
+  "password": "{qualquer password}",
+  "role": "admin",
+  "username": "{qualquer username}"
+}
+```
+
+## Como criar um usuário normal
+
+Rota POST /api/auth/signup
+
+```json
+{
+  "email": "{qualquer e-mail}",
+  "password": "{qualquer password}",
+  "username": "{qualquer username}"
+}
+```
+
+## Links de Referência utilizados para desenvolver esse projeto 
+
+* https://bezkoder.com/spring-boot-jwt-auth-mongodb/
+* https://docs.docker.com/compose/compose-file/
+* https://www.marcobehler.com/guides/mvn-clean-install-a-short-guide-to-maven
+* https://github.com/springfox/springfox/issues/3052
+* https://medium.com/@por.porkaew15/spring-boot-application-and-docker-with-intellij-ide-8d2a843c529e
+* https://github.com/spring-guides/gs-spring-boot-docker/tree/master/complete
+
+## O que poderia ter sido desenvolvido melhor 
+
+- 1 - Poderia ter criado um micro serviço responsável apenas pela autenticação.
+- 2 - As informações de autenticação poderiam estar pelo menos em um banco de dados diferente
+- 3 - Desenvolvimento de testes de unidade]
+- 4 - Adicionado um usuário e senha no banco de dados
+- 5 - Ao subir a aplicação (docker-compose up) ocorre um erro de conexão da api com o banco, porém após alguns instantes ela se restabelece. Alterei o arquivo docker-compose.yml informando que a api depende do banco, porém não foi o suficiente para solucionar o problema. 
+- 6 - Implementação de "annotations" para validar os dados recebidos
+- 7 - Criação de evento de captura de exceptions
+- 8 - Implementação de logs 
