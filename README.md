@@ -28,7 +28,7 @@ mvn clean install
 - Passo 2 - inicie a aplicação utilizando o docker-compose
 
 ```cmd
-docker-compose up
+docker-compose up --force-recreate
 ```
 
 - Passo 3 - Abra entre na aplicação
