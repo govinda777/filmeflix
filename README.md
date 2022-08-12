@@ -62,7 +62,7 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: applica
 - 8088 - Api
 - 27017 - MongoDB
 
-## Como criar um usuário Admin
+## Como criar um usuário ROLE_ADMIN
 
 Rota POST /api/auth/signup
 
@@ -70,7 +70,7 @@ Rota POST /api/auth/signup
 {
   "email": "{qualquer e-mail}",
   "password": "{qualquer password}",
-  "role": "admin",
+  "role": "ROLE_ADMIN",
   "username": "{qualquer username}"
 }
 ```
