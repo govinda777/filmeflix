@@ -33,9 +33,29 @@ docker-compose up --force-recreate
 
 - Passo 3 - Abra entre na aplicação
 
-#### Swagger
+## Swagger
 
 http://localhost:8088/swagger-ui.html
+
+## Exemplo de requests
+
+> POST /api/auth/signup
+
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \
+"email": "govinda777%40gmail.com", \
+"password": "123", \
+"role": "ROLE_ADMIN", \
+"username": "govinda777" \
+}' 'http://localhost:8088/api/auth/signup'
+
+> POST /api/auth/signin
+
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ \
+"password": "123", \
+"username": "govinda777" \
+}' 'http://localhost:8088/api/auth/signin'
+
+> 
 
 ## Portas que a aplicação utiliza
 
@@ -86,3 +106,6 @@ Rota POST /api/auth/signup
 - 6 - Implementação de "annotations" para validar os dados recebidos
 - 7 - Criação de evento de captura de exceptions
 - 8 - Implementação de logs 
+
+
+23452352
